@@ -31,6 +31,7 @@ try {
         Copy-Item -LiteralPath (Join-Path $PSScriptRoot $file) -Destination $stagedAddIn
     }
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Resources') -Destination $stagedAddIn -Recurse
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'docs') -Destination $stagedAddIn -Recurse
     if (Test-Path -LiteralPath $archivePath) {
         Remove-Item -LiteralPath $archivePath -Force
     }
