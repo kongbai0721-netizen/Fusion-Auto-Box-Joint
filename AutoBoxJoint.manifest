@@ -1,7 +1,7 @@
 {
 	"autodeskProduct": "Fusion360",
 	"type": "addin",
-	"id": "629a8477-0c8d-4fb1-80f5-ea32dddbc134",
+	"id": "0ddcc795-4436-4b39-877d-9910fd2522de",
 	"author": "Mark Suska / cuikai",
 	"description": {
 		"": "自动识别两个实体的相交区，并生成适合 3D 打印的交替箱形榫。"

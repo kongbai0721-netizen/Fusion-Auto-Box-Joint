@@ -4,22 +4,24 @@
 一、安装
 
 1. 完全退出 Autodesk Fusion。
-2. 解压发布包，确认得到完整的 BoxJoint 文件夹。
+2. 解压发布包，确认得到完整的 AutoBoxJoint 文件夹。
 3. 按 Win+R，输入：
    %APPDATA%\Autodesk\Autodesk Fusion 360\API\AddIns
-4. 将整个 BoxJoint 文件夹复制到上述 AddIns 目录。
-5. 确认最终目录中直接存在 BoxJoint.manifest 和 BoxJoint.py，不能多套一层目录：
-   AddIns\BoxJoint\BoxJoint.manifest
-   AddIns\BoxJoint\BoxJoint.py
+4. 将整个 AutoBoxJoint 文件夹复制到上述 AddIns 目录。
+5. 确认最终目录中直接存在 AutoBoxJoint.manifest 和 AutoBoxJoint.py，不能多套一层目录：
+   AddIns\AutoBoxJoint\AutoBoxJoint.manifest
+   AddIns\AutoBoxJoint\AutoBoxJoint.py
 6. 启动 Fusion。加载项清单已设置为随 Fusion 自动启动。
 7. 如果命令没有出现，打开“实用程序 → 脚本和加载项 → 加载项”，
-   找到 BoxJoint，点击“运行”并勾选“启动时运行”。
+   找到 AutoBoxJoint，点击“运行”并勾选“启动时运行”。
 
 二、升级
 
+从早期版本升级时，请先在 Fusion 中停用旧的定制版。旧目录 BoxJoint 也可能属于 Mark Suska 的原版，请核对作者和内容，保留原版及用户文件。新版单独安装在 AutoBoxJoint 目录。
+
 1. 完全退出 Fusion。
-2. 备份或删除 AddIns 目录中旧的 BoxJoint 文件夹。
-3. 将新版 BoxJoint 文件夹完整复制进去。
+2. 备份或删除 AddIns 目录中旧的 AutoBoxJoint 文件夹。
+3. 将新版 AutoBoxJoint 文件夹完整复制进去。
 4. 不要把新版文件逐个混入旧目录，以免遗留旧脚本或缓存。
 
 三、入口和工具栏
@@ -31,12 +33,12 @@
 四、卸载
 
 完全退出 Fusion，然后删除：
-%APPDATA%\Autodesk\Autodesk Fusion 360\API\AddIns\BoxJoint
+%APPDATA%\Autodesk\Autodesk Fusion 360\API\AddIns\AutoBoxJoint
 
 五、故障排查
 
 如果按钮未出现，请在 Fusion 的“实用程序 → 脚本和加载项 → 加载项”中确认
-BoxJoint 已启用，并勾选“启动时运行”。
+AutoBoxJoint 已启用，并勾选“启动时运行”。
 
 六、快速使用
 

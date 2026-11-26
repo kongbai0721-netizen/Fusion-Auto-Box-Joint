@@ -3,18 +3,18 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$manifestPath = Join-Path $PSScriptRoot 'BoxJoint.manifest'
+$manifestPath = Join-Path $PSScriptRoot 'AutoBoxJoint.manifest'
 $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json -AsHashtable
 $packageName = "AutoBoxJoint-v$($manifest['version'])-windows.zip"
 $resolvedOutput = [System.IO.Path]::GetFullPath($OutputDirectory)
 $stagingRoot = Join-Path ([System.IO.Path]::GetTempPath()) ("AutoBoxJoint-package-" + [guid]::NewGuid().ToString('N'))
-$stagedAddIn = Join-Path $stagingRoot 'BoxJoint'
+$stagedAddIn = Join-Path $stagingRoot 'AutoBoxJoint'
 $archivePath = Join-Path $resolvedOutput $packageName
 
 $files = @(
     'auto_box_joint_layout.py',
-    'BoxJoint.manifest',
-    'BoxJoint.py',
+    'AutoBoxJoint.manifest',
+    'AutoBoxJoint.py',
     'fusion_auto_box_joint.py',
     'fusion_brep_util.py',
     'fusion_util.py',

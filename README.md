@@ -41,20 +41,20 @@
 1. 打开 [Releases 页面](https://github.com/kongbai0721-netizen/Fusion-Auto-Box-Joint/releases)。
 2. 下载最新版 `AutoBoxJoint-v*-windows.zip`。
 3. **完全退出 Autodesk Fusion**，包括仍在后台运行的 Fusion 进程。
-4. 解压 ZIP，得到顶层文件夹 `BoxJoint`。
+4. 解压 ZIP，得到顶层文件夹 `AutoBoxJoint`。
 5. 按 `Win + R`，输入以下路径并回车：
 
    ```text
    %APPDATA%\Autodesk\Autodesk Fusion 360\API\AddIns
    ```
 
-6. 将整个 `BoxJoint` 文件夹复制到 `AddIns` 目录。最终结构应类似：
+6. 将整个 `AutoBoxJoint` 文件夹复制到 `AddIns` 目录。最终结构应类似：
 
    ```text
    AddIns\
-   └─ BoxJoint\
-      ├─ BoxJoint.manifest
-      ├─ BoxJoint.py
+   └─ AutoBoxJoint\
+      ├─ AutoBoxJoint.manifest
+      ├─ AutoBoxJoint.py
       ├─ fusion_auto_box_joint.py
       ├─ Resources\
       └─ docs\
@@ -68,7 +68,7 @@
 
 1. 打开“实用程序 → 脚本和加载项”。
 2. 切换到“加载项”选项卡。
-3. 找到 `BoxJoint`，点击“运行”。
+3. 找到 `AutoBoxJoint`，点击“运行”。
 4. 勾选“启动时运行”。
 5. 回到“设计”工作空间的“实体”选项卡检查“修改”菜单。
 
@@ -147,7 +147,7 @@
 
 ### 取消后实体呈半透明或不能选择
 
-最新版会在命令完全结束后恢复源实体。如果 Fusion 曾异常退出，可先关闭当前命令，再到“脚本和加载项”中停止并重新运行 `BoxJoint`；必要时重启 Fusion。
+最新版会在命令完全结束后恢复源实体。如果 Fusion 曾异常退出，可先关闭当前命令，再到“脚本和加载项”中停止并重新运行 `AutoBoxJoint`；必要时重启 Fusion。
 
 ### “移动/复制”无法选中结果实体
 
@@ -169,9 +169,11 @@
 
 ### 升级
 
+从早期版本升级时，请先在 Fusion 中停用旧的定制版。旧目录 BoxJoint 也可能属于 Mark Suska 的原版，请核对作者和内容，保留原版及用户文件。新版单独安装在 AutoBoxJoint 目录。
+
 1. 完全退出 Fusion。
-2. 备份或删除旧的 `AddIns\BoxJoint` 文件夹。
-3. 将新版压缩包中的完整 `BoxJoint` 文件夹复制进去。
+2. 备份或删除旧的 `AddIns\AutoBoxJoint` 文件夹。
+3. 将新版压缩包中的完整 `AutoBoxJoint` 文件夹复制进去。
 4. 不要把新文件逐个混入旧目录，以免残留旧脚本或缓存。
 
 ### 卸载
@@ -179,7 +181,7 @@
 完全退出 Fusion，然后删除：
 
 ```text
-%APPDATA%\Autodesk\Autodesk Fusion 360\API\AddIns\BoxJoint
+%APPDATA%\Autodesk\Autodesk Fusion 360\API\AddIns\AutoBoxJoint
 ```
 
 ## 开发与重新打包
